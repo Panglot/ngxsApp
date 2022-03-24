@@ -41,6 +41,11 @@ p {
     flex-wrap: wrap;
     gap: 15px;
     list-style-type: none;
+
+    li { 
+      display: flex;
+      align-items: center1;
+    }
   }
 }
 
