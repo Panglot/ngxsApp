@@ -1,13 +1,14 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Test1Component } from './test1.component';
+import { ServiceOnlyComponent } from './service-only.component';
 
 
 
 @NgModule({
-  declarations: [Test1Component],
+  declarations: [ServiceOnlyComponent],
   imports: [
     CommonModule
   ]
 })
-export class Test1Module { }
+export class ServiceOnlyModule { }

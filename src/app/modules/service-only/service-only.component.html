@@ -1,0 +1,9 @@
+<div class="content">
+
+    <button (click)="todoStore.generateTodo()">Give me something to do</button>
+    <ul>
+      <li *ngFor="let todo of generatedTodos$ | async">
+        <pre>{{ todo | json }}</pre>
+      </li>
+    </ul>
+</div>

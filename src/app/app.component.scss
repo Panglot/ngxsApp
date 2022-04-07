@@ -39,18 +39,24 @@ p {
   ul {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 25px;
     list-style-type: none;
 
-    li { 
+    li {
       display: flex;
-      align-items: center1;
+      align-items: center;
+      cursor: pointer;
+      outline: none;
+
+      &.active-route {
+        text-decoration: underline;
+      }
     }
   }
 }
 
 .toolbar img {
-  margin: 0 16px;
+  margin: 0 4px;
 }
 
 .toolbar #twitter-logo {
