@@ -1,9 +1,9 @@
 export interface ITodoState {
   todoGeneratedList: any[];
-  todoList: any[];
+  todoSelectedList: any[];
 }
 
 export const initialTodoState: ITodoState = {
   todoGeneratedList: [],
-  todoList: []
+  todoSelectedList: []
 };

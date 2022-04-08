@@ -10,6 +10,7 @@ import { TodoStoreService } from './store/todo-store.service';
 })
 export class ServiceOnlyComponent implements OnInit {
   public generatedTodos$: Observable<any> = this.todoStore.generatedTodos$;
+  public selectedTodos$: Observable<any> = this.todoStore.selectedTodos$;
 
   constructor(public todoStore: TodoStoreService) { }
 
