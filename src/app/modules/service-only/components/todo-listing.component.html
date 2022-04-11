@@ -1,0 +1,15 @@
+<ul class="list-group-flush pt-4 px-0">
+  <li *ngFor="let todo of todos$ | async" class="list-group-item mb-1"
+    [ngClass]="{'bg-warning': todo.isCompleted, 'd-flex align-items-start': todoTypeInput === 'generated'}">
+    <div class="ms-2 me-auto mb-1">
+      <div class="fw-bold">{{ todo.activity }}</div>
+      {{ todo.type }}
+    </div>
+    <button *ngIf="todoTypeInput === 'generated'" (click)="todoStore.selectTodo(todo.key)" class="btn btn-outline-primary ms-2">+</button>
+    <div *ngIf="todoTypeInput === 'selected'" class="d-flex justify-content-evenly align-items-start">
+      <button (click)="todoStore.unselectTodo(todo.key)" class="btn btn-outline-primary">←</button>
+      <button (click)="todoStore.completeTodo(todo.key)" class="btn btn-outline-primary">✓</button>
+      <button (click)="todoStore.removeSelected(todo.key)" class="btn btn-outline-primary">🗙</button>
+    </div>
+  </li>
+</ul>

@@ -5,7 +5,6 @@ import { TodoStoreService } from './store/todo-store.service';
 @Component({
   selector: 'app-service-only',
   templateUrl: './service-only.component.html',
-  styleUrls: ['./service-only.component.scss'],
   providers: [TodoStoreService]
 })
 export class ServiceOnlyComponent implements OnInit {
@@ -14,6 +13,6 @@ export class ServiceOnlyComponent implements OnInit {
 
   constructor(public todoStore: TodoStoreService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
 }

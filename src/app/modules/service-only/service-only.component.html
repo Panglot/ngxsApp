@@ -7,33 +7,13 @@
             <button type="button" class="btn btn-primary fs-5" (click)="todoStore.generateTodo()">Give me something to do</button>
             <button type="button" class="btn btn-primary fs-5" (click)="todoStore.clearGenerated()">Clear list</button>
           </div>
-          <ul class="list-group-flush pt-4 px-0">
-            <li *ngFor="let todo of generatedTodos$ | async" class="list-group-item d-flex justify-content-between align-items-start mb-1">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">{{ todo.activity }}</div>
-                {{ todo.type }}
-              </div>
-              <button (click)="todoStore.selectTodo(todo.key)" class="btn btn-outline-primary">+</button>
-            </li>
-          </ul>
+          <app-todo-listing [todoType]="'generated'"></app-todo-listing>
         </div>
       </div>
       <div class="col-6">
         <div class="p-3 border bg-light">
           <div class="card-header bg-white text-primary fw-bold fs-5">Selected activities</div>
-          <ul class="list-group list-group-flush pt-4 px-0">
-            <li *ngFor="let todo of selectedTodos$ | async" class="list-group-item mb-1" [ngClass]="{'bg-info': todo.isCompleted}">
-              <div class="ms-2 me-auto mb-1">
-                <div class="fw-bold">{{ todo.activity }}</div>
-                {{ todo.type }}
-              </div>
-              <div class="d-flex justify-content-evenly align-items-start">
-                <button (click)="todoStore.unselectTodo(todo.key)" class="btn btn-outline-primary">←</button>
-                <button (click)="todoStore.completeTodo(todo.key)" class="btn btn-outline-primary">✔</button>
-                <button (click)="todoStore.removeSelected(todo.key)" class="btn btn-outline-primary">✖</button>
-              </div>
-            </li>
-          </ul>
+          <app-todo-listing [todoType]="'selected'"></app-todo-listing>
         </div>
       </div>
     </div>
