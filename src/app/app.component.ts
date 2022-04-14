@@ -7,16 +7,4 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnInit {
-
-  constructor(private httpClient: HttpClient) {}
-
-  public ngOnInit(): void {
-    for (let index = 0; index < 10; index++) {
-      this.httpClient.get('https://www.boredapi.com/api/activity').toPromise()
-      .then((response) => {
-        // console.log(response);
-      });
-    }
-  }
-}
+export class AppComponent { }

@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { TodoState } from './modules/ngxs-storage/store/todo-store.state';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,12 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxsModule.forRoot([
+      TodoState
+    ]),
+    NgxsReduxDevtoolsPluginModule.forRoot()
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

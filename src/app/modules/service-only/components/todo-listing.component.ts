@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TodoStoreService } from '../store/todo-store.service';
 
@@ -6,7 +6,7 @@ import { TodoStoreService } from '../store/todo-store.service';
   selector: 'app-todo-listing',
   templateUrl: './todo-listing.component.html'
 })
-export class TodoListingComponent implements OnInit {
+export class TodoListingComponent {
   public todos$: Observable<any>;
   public todoTypeInput = '';
 
@@ -22,12 +22,5 @@ export class TodoListingComponent implements OnInit {
     this.todoTypeInput = value;
   }
 
-
   constructor(public todoStore: TodoStoreService) { }
-
-  ngOnInit(): void {
-    console.log(this.todos$);
-
-  }
-
 }

@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { Select, Store } from '@ngxs/store';
+import * as TodoActions from './store/todo-store.actions';
 
 @Component({
   selector: 'app-ngxs-storage',
-  templateUrl: './ngxs-storage.component.html',
-  styleUrls: ['./ngxs-storage.component.scss']
+  templateUrl: './ngxs-storage.component.html'
 })
-export class NgxsStorageComponent implements OnInit {
+export class NgxsStorageComponent {
+  @Select(state => state.todo) todo$;
+  // @Select() todo$;
+  @Select(state => state.todo.todoGeneratedList) todoGeneratedList$;
+  @Select(state => state.todo.todoSelectedList) todoSelectedList$;
 
-  constructor() { }
+  constructor(private store: Store) { }
 
-  ngOnInit(): void {
+  public generateTodo(): void {
+    this.store.dispatch([new TodoActions.Generate()]);
   }
 
+  public clearGenerated(): void {
+    this.store.dispatch([new TodoActions.ClearGenerated()]);
+  }
 }

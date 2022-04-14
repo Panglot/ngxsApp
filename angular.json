@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngxsApp"
+    }
+  },
+  "defaultProject": "ngxsApp",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
