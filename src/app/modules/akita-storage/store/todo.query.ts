@@ -1,12 +1,13 @@
-import { Query } from '@datorama/akita';
+import { Injectable } from '@angular/core';
+import { Query, QueryEntity } from '@datorama/akita';
 import { TodoState, TodoStore } from './todo.store';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TodoQuery extends Query<TodoState> {
-  public todoGeneratedList$ = this.select('todoGeneratedList');
-  public todoSelectedList$ = this.select(state => state.todoSelectedList);
+export class TodoQuery extends QueryEntity<TodoState> {
+  public selectTodoGeneratedList$ = this.select('todoGeneratedList');
+  public selectTodoSelectedList$ = this.select(state => state.todoSelectedList);
 
   constructor(protected store: TodoStore) {
     super(store);

@@ -5,16 +5,16 @@
         <div class="p-3 border bg-light">
           <div class="d-flex justify-content-between">
             <button (click)="generateTodo()" type="button" class="btn btn-primary fs-5">Give me something to do</button>
-            <!-- <button (click)="clearGenerated()" type="button" class="btn btn-primary fs-5">Clear list</button> -->
+            <button (click)="clearGenerated()" type="button" class="btn btn-primary fs-5">Clear list</button>
           </div>
-          <!-- <app-todo-listing-ngxs [todoType]="'generated'"></app-todo-listing-ngxs> -->
+          <app-todo-listing-akita [todoType]="'generated'"></app-todo-listing-akita>
           <!-- [todoList]="todoGeneratedList$ | async" -->
         </div>
       </div>
       <div class="col-6">
         <div class="p-3 border bg-light">
           <div class="card-header bg-white text-primary fw-bold fs-5">Selected activities</div>
-          <!-- <app-todo-listing-ngxs [todoType]="'selected'"></app-todo-listing-ngxs> -->
+          <app-todo-listing-akita [todoType]="'selected'"></app-todo-listing-akita>
           <!-- [todoList]="todoSelectedList$ | async" -->
         </div>
       </div>

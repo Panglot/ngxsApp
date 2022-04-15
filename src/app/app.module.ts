@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { TodoState } from './modules/ngxs-storage/store/todo-store.state';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TodoState } from './modules/ngxs-storage/store/todo-store.state';
     NgxsModule.forRoot([
       TodoState
     ]),
-    NgxsReduxDevtoolsPluginModule.forRoot()
+    NgxsReduxDevtoolsPluginModule.forRoot(),
+    AkitaNgDevtools.forRoot()
   ],
   bootstrap: [AppComponent]
 })

@@ -133,6 +133,10 @@
         "check-typecast"
       ]
     },
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "allowJs": true
+    },
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,

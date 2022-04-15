@@ -16,4 +16,8 @@ export class AkitaStorageComponent implements OnInit {
   public generateTodo(): void {
     this.todoService.generate();
   }
+
+  public clearGenerated(): void {
+    this.todoService.clearGenerated();
+  }
 }

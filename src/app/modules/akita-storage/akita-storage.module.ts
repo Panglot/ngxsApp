@@ -1,3 +1,4 @@
+import { TodoListingAkitaComponent } from './components/todo-listing-akita.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AkitaStorageComponent } from './akita-storage.component';
@@ -5,7 +6,10 @@ import { AkitaStorageComponent } from './akita-storage.component';
 
 
 @NgModule({
-  declarations: [AkitaStorageComponent],
+  declarations: [
+    AkitaStorageComponent,
+    TodoListingAkitaComponent
+  ],
   imports: [
     CommonModule
   ]
