@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ITodoState, initialTodoState } from './ITodoStore';
-import { StateService } from './StateService.service';
+import { TodoStateModel, initialTodoState } from './todo.model';
+import { StateService } from './todo.state.service';
 
 @Injectable()
-export class TodoStoreService extends StateService<ITodoState> {
+export class TodoStoreService extends StateService<TodoStateModel> {
   private apiUrl = 'https://www.boredapi.com/api/activity';
 
   public selectedTodos$: Observable<object[]> = this.select(state => state.todoSelectedList);

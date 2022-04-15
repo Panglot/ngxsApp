@@ -8,14 +8,12 @@
             <button (click)="clearGenerated()" type="button" class="btn btn-primary fs-5">Clear list</button>
           </div>
           <app-todo-listing-akita [todoType]="'generated'"></app-todo-listing-akita>
-          <!-- [todoList]="todoGeneratedList$ | async" -->
         </div>
       </div>
       <div class="col-6">
         <div class="p-3 border bg-light">
           <div class="card-header bg-white text-primary fw-bold fs-5">Selected activities</div>
           <app-todo-listing-akita [todoType]="'selected'"></app-todo-listing-akita>
-          <!-- [todoList]="todoSelectedList$ | async" -->
         </div>
       </div>
     </div>

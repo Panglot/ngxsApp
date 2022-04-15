@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TodoStoreService } from './store/todo-store.service';
+import { TodoStoreService } from './store/todo.store.service';
 
 @Component({
   selector: 'app-service-only',

@@ -9,7 +9,6 @@ import { Observable } from 'rxjs';
 })
 export class TodoListingAkitaComponent implements OnInit {
   @Input() todoType = '';
-  // @Input() todoList = [];
 
   public todoList$: Observable<any>;
 
@@ -25,7 +24,6 @@ export class TodoListingAkitaComponent implements OnInit {
           break;
       }
   }
-
 
   public select(key: string): void {
     this.todoService.select(key);

@@ -1,9 +1,9 @@
-export interface ITodoState {
+export interface TodoStateModel {
   todoGeneratedList: any[];
   todoSelectedList: any[];
 }
 
-export const initialTodoState: ITodoState = {
+export const initialTodoState: TodoStateModel = {
   todoGeneratedList: [],
   todoSelectedList: []
 };

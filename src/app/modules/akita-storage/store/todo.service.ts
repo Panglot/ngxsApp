@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { action, arrayAdd, arrayRemove } from '@datorama/akita';
+import { arrayAdd } from '@datorama/akita';
 import { TodoStore } from './todo.store';
 
 
